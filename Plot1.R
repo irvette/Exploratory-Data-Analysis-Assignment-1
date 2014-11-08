@@ -1,0 +1,5 @@
+w<-read.table("household_power_consumption.txt",header=TRUE,sep=";",skip=66636,nrows=2879,na.strings="?")
+names(w)<-names(colnames<-read.table("household_power_consumption.txt",header=TRUE,nrows=1,na.strings="?",sep=";"))
+png("Plot1.png",width = 480, height = 480)
+ hist(w$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",ylab="Frequency",col="red")
+dev.off()
